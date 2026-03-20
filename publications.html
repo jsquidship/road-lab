@@ -10,34 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .pub-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-      padding: 1.25rem 1.5rem;
-      background: var(--cream-dark);
-      border-radius: 8px;
-    }
-    .pub-stat-item {
-      text-align: center;
-    }
-    .pub-stat-num {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--amber);
-      line-height: 1;
-    }
-    .pub-stat-label {
-      font-family: var(--font-ui);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--brown-mid);
-      margin-top: 0.25rem;
-    }
     .pub-section {
       margin-bottom: 3rem;
     }
@@ -117,8 +89,6 @@
       line-height: 1.6;
     }
     @media (max-width: 600px) {
-      .pub-stats { gap: 1.25rem; }
-      .pub-stat-num { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -155,24 +125,6 @@
       <div class="container">
         <h2 id="publications-heading" class="sr-only">Publications list</h2>
 
-        <div class="pub-stats" role="region" aria-label="Publication statistics">
-          <div class="pub-stat-item">
-            <div class="pub-stat-num">51</div>
-            <div class="pub-stat-label">Publications</div>
-          </div>
-          <div class="pub-stat-item">
-            <div class="pub-stat-num">12+</div>
-            <div class="pub-stat-label">Years Active</div>
-          </div>
-          <div class="pub-stat-item">
-            <div class="pub-stat-num">35+</div>
-            <div class="pub-stat-label">Collaborators</div>
-          </div>
-          <div class="pub-stat-item">
-            <div class="pub-stat-num">25+</div>
-            <div class="pub-stat-label">Student Co-Authors</div>
-          </div>
-        </div>
 
         <!-- 2026 -->
         <div class="pub-section">
