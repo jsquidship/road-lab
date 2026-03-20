@@ -372,11 +372,16 @@ strong { font-weight: 600; }
   border-bottom: 1px solid var(--cream-mid);
 }
 .research-area:last-of-type { border-bottom: none; }
+.research-area-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
 .research-area-inner h2 {
   margin-bottom: var(--space-sm);
 }
 .research-area-inner > p {
   margin-bottom: var(--space-sm);
+  max-width: none;
 }
 
 /* --- People Grid --- */
@@ -1015,6 +1020,11 @@ hr.section-rule {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.framework-content p {
+  max-width: none;
 }
 
 .key-themes { margin-top: var(--space-lg); }
