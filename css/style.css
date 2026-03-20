@@ -372,9 +372,6 @@ strong { font-weight: 600; }
   border-bottom: 1px solid var(--cream-mid);
 }
 .research-area:last-of-type { border-bottom: none; }
-.research-area-inner {
-  max-width: 78ch;
-}
 .research-area-inner h2 {
   margin-bottom: var(--space-sm);
 }
@@ -845,7 +842,7 @@ hr.section-rule {
 }
 .pi-card-top {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 200px 1fr;
   align-items: start;
 }
 .pi-photo .person-photo {
@@ -856,7 +853,7 @@ hr.section-rule {
   border-radius: 0;
 }
 .pi-details {
-  padding: var(--space-xl);
+  padding: var(--space-lg);
 }
 .pi-details h3 {
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
@@ -928,28 +925,42 @@ hr.section-rule {
   border-bottom: 1px solid var(--cream-mid);
 }
 
-.member-group .people-grid {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+/* Full-width stacked rows */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 .member-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
   box-shadow: var(--shadow-sm);
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-md);
+  border-left: 3px solid var(--cream-mid);
+  transition: border-left-color var(--transition);
+}
+.member-card:hover {
+  border-left-color: var(--amber);
 }
 .member-card .person-photo {
   width: 48px;
   height: 48px;
   border-radius: 50%;
   aspect-ratio: 1;
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
+  font-size: 1rem;
   flex-shrink: 0;
   min-height: unset;
+  margin-bottom: 0;
+}
+.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 }
 .member-card h4 {
   font-family: var(--font-display);
@@ -972,7 +983,13 @@ hr.section-rule {
   font-size: 0.88rem;
   color: var(--text-secondary);
   max-width: none;
-  margin-top: 0.15rem;
+}
+
+/* Undergraduate prose — full width */
+.member-group > p {
+  max-width: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
 }
 
 /* ============================================
@@ -998,7 +1015,6 @@ hr.section-rule {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  max-width: 78ch;
 }
 
 .key-themes { margin-top: var(--space-lg); }
@@ -1040,12 +1056,18 @@ hr.section-rule {
   .pi-photo .person-photo { min-height: auto; aspect-ratio: 3/2; }
   .pi-details { padding: var(--space-lg); }
   .pi-card-bio { padding: var(--space-lg); }
+}
+
+@media (max-width: 768px) {
+  .opportunity-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
   .opportunity-cards { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
   .opportunity-cards { gap: var(--space-md); }
-  .member-group .people-grid { grid-template-columns: 1fr; }
 }
 
 /* --- Reduced Motion --- */
