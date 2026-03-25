@@ -953,14 +953,15 @@ hr.section-rule {
   border-left-color: var(--amber);
 }
 .member-card .person-photo {
-  width: 48px;
-  height: 48px;
+  width: 72px;      /* was 48px */
+  height: 72px;     /* was 48px */
   border-radius: 50%;
   aspect-ratio: 1;
   font-size: 1rem;
   flex-shrink: 0;
   min-height: unset;
   margin-bottom: 0;
+  overflow: hidden; /* hide any overflow from the image */
 }
 .member-info {
   display: flex;
