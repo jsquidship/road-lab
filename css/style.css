@@ -480,7 +480,8 @@ strong { font-weight: 600; }
 .pub-item {
   background: var(--white);
   border-radius: var(--radius);
-  padding: var(--space-md) calc(var(--space-lg) * 1.4);
+  /* top, right, bottom, left */
+  padding: var(--space-md) calc(var(--space-lg) * 1.4) var(--space-md) calc(var(--space-lg) * 1.4);
   border-left: 4px solid var(--cream-mid);
   box-shadow: var(--shadow-sm);
   transition: border-color var(--transition);
