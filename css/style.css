@@ -1202,3 +1202,20 @@ hr.section-rule {
     transition-duration: 0.01ms !important;
   }
 }
+/* --- Full-height layout: keeps the footer at the bottom of the window
+       and removes blank space below it on short pages --- */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+body > main { flex: 1 0 auto; }
+.site-footer { flex-shrink: 0; }
+
+/* Home page: let the hero stretch to fill any leftover space */
+main:has(> .hero) {
+  display: flex;
+  flex-direction: column;
+}
+main > .hero { flex: 1 0 auto; }
